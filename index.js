@@ -1,5 +1,5 @@
 require("./mongoose")
-const productSchema=require("./ecomSchema")
+const ImageModel=require("./ecomSchema")
 const express=require("express")
 const app=express()
 const multer=require("multer")
@@ -27,8 +27,8 @@ app.post("/",(req,resp)=>{
             const newImage=new ImageModel({
                 pid:req.body.pid,
                 pname:req.body.pname,
-                pprice:req.body. pprice,
-                pdesc:req.body.pprice,
+                pprice:req.body.pprice,
+                pdesc:req.body.pdesc,
                 pcat:req.body.pcat,
                 pimage:"localhost:4000/uploads/"+req.file.filename
             })
@@ -38,3 +38,6 @@ app.post("/",(req,resp)=>{
     })
 })
 app.listen(4000)
+
+
+
