@@ -7,7 +7,7 @@ const ecomSchema=mongoose.Schema({
     pcat:String,
     pimage:String
 })
-mongoose.model.exports=mongoose.model("products",ecomSchema)
+module.exports=mongoose.model("products",ecomSchema)
 
 
 

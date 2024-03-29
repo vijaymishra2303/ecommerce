@@ -1,5 +1,5 @@
 require("./mongoose")
-const ImageModel=require("./ecomSchema")
+const ImageModel = require("./ecomSchema")
 const express=require("express")
 const app=express()
 const multer=require("multer")
@@ -30,7 +30,7 @@ app.post("/",(req,resp)=>{
                 pprice:req.body.pprice,
                 pdesc:req.body.pdesc,
                 pcat:req.body.pcat,
-                pimage:"localhost:4000/uploads/"+req.file.filename
+                pimage:"http://localhost:4000/uploads/"+req.file.filename
             })
             newImage.save()
             resp.send("File Uploaded")
